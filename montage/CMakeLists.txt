@@ -1,9 +1,9 @@
 # cmake 的最低版本要求
 cmake_minimum_required(VERSION 3.1)
 
-project(montage)
+project(transition_pic)
 
 find_package(OpenCV 4 REQUIRED)
 
-add_executable(montage montage.cpp)
-target_link_libraries(montage ${OpenCV_LIBS}) 
+add_executable(transition_pic transition_pic.cpp)
+target_link_libraries(transition_pic ${OpenCV_LIBS}) 
