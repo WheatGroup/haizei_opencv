@@ -15,7 +15,7 @@ int main(int argc, char** argv )
 
     // 图片是3通道 0-255  然后我们分成6分
     vector<Vec3d> colors;
-    unsigned long index = 0;
+    int index = 0;
     for (int i = 0; i < 6; i++)
     {
         for (int j = 0; j < 6; j++)
@@ -54,7 +54,9 @@ int main(int argc, char** argv )
             } 
         }
         char outImgPath[64] = {};
-        sprintf(outImgPath, "../out_img/out_img_%.0f_%.0f_%.0f.png", colors[index][0], colors[index][1], colors[index][2]);
+        // sprintf(outImgPath, "../out_img/out_img_%.0f_%.0f_%.0f.png", colors[index][0], colors[index][1], colors[index][2]);
+        sprintf(outImgPath, "../out_img/%d.png", index);
+
         imwrite(outImgPath, temp);
         index += 1;
     }
